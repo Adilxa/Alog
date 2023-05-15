@@ -4,6 +4,7 @@ import Preloader from "../../components/preloader/Preloader";
 import Header from "../../components/Header/Header";
 import ChooseGender from "../../components/ChooseGender/ChooseGender";
 import Slider from "../../components/Slider/Slider";
+import Footer from "../../components/footer/Footer";
 
 const HomePage = () => {
   const { isLoading, getSneakers, sneakers } = useSneakers();
@@ -12,13 +13,13 @@ const HomePage = () => {
     getSneakers();
   }, [getSneakers]);
 
-  console.log(sneakers);
   if (isLoading) return <Preloader />;
   return (
     <>
       <Header />
       <ChooseGender />
       <Slider />
+      <Footer />
     </>
   );
 };

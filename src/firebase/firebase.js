@@ -1,9 +1,10 @@
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { collection } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCtettK4t2_2jy8pwsXvNJ2sZ7ecWHMMx0",
