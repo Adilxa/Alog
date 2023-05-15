@@ -6,6 +6,7 @@ import {
   getDocs,
   updateDoc,
   setDoc,
+  deleteDoc,
 } from "firebase/firestore";
 import { useCallback, useState } from "react";
 import { db } from "../firebase/firebase";
@@ -24,10 +25,17 @@ const useCart = () => {
     setLoading(false);
   }, []);
 
+  const addToCart = useCallback(async (data) => {
+    await addDoc(collection(db, "cart"), {
+      ...data,
+    });
+  }, []);
+
   return {
     isLoading,
     getElements,
     cart,
+    addToCart,
   };
 };
 
