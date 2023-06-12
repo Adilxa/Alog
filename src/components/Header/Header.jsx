@@ -106,7 +106,10 @@ const Header = ({ isPage, filtering, setType, name, cart }) => {
                 }}
               >
                 {renderSocial}
+                <Link to="/registration" >Registration</Link>
+                <Link to="/login" >Login</Link>
               </Grid>
+
             </Grid>
         }
       </Grid>

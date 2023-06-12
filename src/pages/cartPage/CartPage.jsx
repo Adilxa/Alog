@@ -26,11 +26,11 @@ const CartPage = () => {
         setNew(arr)
     }
 
-    const renderCartItems = useMemo(() => user?.cart?.filter((el) => el != "").map((item) => <CartItem removeFromArr={removeFromArr} key={item.tid} {...item}  />), [user])
+    const renderCartItems = useMemo(() => user?.cart?.filter((el) => el != "").map((item) => <CartItem removeFromArr={removeFromArr} key={item.tid} {...item} />), [user])
     if (isLoading) return <Preloader />
     return (
         <>
-            <Header />
+            <Header isPage={true} />
             <div className="container">
                 <Grid sx={{
                     display: "flex",

@@ -30,11 +30,11 @@ export default function CartItem({ img, name, model, color, type, id, removeFrom
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            <CardActions>
+            {/* <CardActions>
                 <Button onClick={() => removeFromArr(id)} size="small" color="primary">
                     Remove from cart
                 </Button>
-            </CardActions>
+            </CardActions> */}
         </Card>
     );
 }

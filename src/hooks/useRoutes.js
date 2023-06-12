@@ -7,6 +7,8 @@ import DetailItem from "../components/DetalItem/DetailItem";
 import UserProfilePage from "../pages/userPage/UserProfilePage";
 import LoginPage from "../pages/login/LoginPage";
 import RegistrationPage from "./../pages/register/RegisterPage";
+import ForWomans from "../pages/foeWomans/ForWomans";
+import DetailItemWomans from "../components/detailItemWomans/DetailItemWoman";
 
 const useRoutes = () => {
   return (
@@ -14,7 +16,9 @@ const useRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/cart/:id" element={<CartPage />} />
       <Route path="/formans" element={<ForMans />} />
+      <Route path="/forwomans" element={<ForWomans />} />
       <Route path="/formans/:id" element={<DetailItem />} />
+      <Route path="/forwomans/:id" element={<DetailItemWomans />} />
       <Route path="/user/:id/:id" element={<DetailItem />} />
       <Route path="/registration" element={<RegistrationPage />} />
       <Route path="/login" element={<LoginPage />} />
