@@ -6,6 +6,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { IconButton } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import useUser from '../../hooks/useUser';
+
 const useStyles = makeStyles((theme) => ({
     card: {
         width: "30%",

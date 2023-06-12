@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Header from "../../components/Header/Header";
-import useMans from "../../hooks/useMans";
+import useWomans from "../../hooks/useWomans";
 import Preloader from "../../components/preloader/Preloader";
 import { Grid } from "@mui/material";
 import SeasonWear from "../../components/seasonWear/SeasonWear";
@@ -8,12 +8,13 @@ import ItemCard from "../../components/itemCard/ItemCard";
 import Slider from "../../components/Slider/Slider";
 import Footer from "../../components/footer/Footer";
 
-const ForMans = () => {
-    const { isLoading, getMans, getMansClothes, clothes } = useMans();
+
+const ForWomans = () => {
+    const { isLoading, getWomans, getWomansClothes, clothes } = useWomans();
 
     useEffect(() => {
-        getMans()
-        getMansClothes()
+        getWomans()
+        getWomansClothes()
     }, [])
     const [filtredType, setType] = useState("")
 
@@ -43,4 +44,4 @@ const ForMans = () => {
     )
 }
 
-export default ForMans;
+export default ForWomans;
